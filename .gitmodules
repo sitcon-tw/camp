@@ -7,4 +7,5 @@
 	branch = gh-pages
 [submodule "2016"]
 	path = 2016
-	url = https://github.com/sitcon-tw/camp2016
+	url = https://github.com/sitcon-tw/camp2016.git
+	branch = gh-pages
