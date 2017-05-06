@@ -12,4 +12,4 @@
 [submodule "2017"]
 	path = 2017
 	url = https://github.com/sitcon-tw/camp2017.git
-	branch = gh-pages
+	branch = master
