@@ -1,6 +1,7 @@
 [submodule "2014"]
 	path = 2014
 	url = https://github.com/sitcon-tw/camp2014.git
+	branch = gh-pages
 [submodule "2015"]
 	path = 2015
 	url = https://github.com/sitcon-tw/camp2015.git
