@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://sitcon.camp/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sitcon.camp/2014/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sitcon.camp/2015/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sitcon.camp/2016/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sitcon.camp/2017/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sitcon.camp/2019/</loc>
+    <lastmod>2019-05-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
