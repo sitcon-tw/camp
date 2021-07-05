@@ -2,7 +2,7 @@
 
 sitcon.camp 的進入點。  
 ## 自動更新
-1. 戳一下 Submodules Sync 的 Action
+1. 戳一下 Submodules Sync 的 Action
 ## 手動更新
 更新各年份指到最新的的 commit：  
 1. clone 本 repo，並進入該資料夾  
