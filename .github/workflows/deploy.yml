@@ -28,8 +28,8 @@ jobs:
             - name: Find and Copy Latest 404.html
               run: |
                   set -e
-
-                  folders=$(find . -maxdepth 1 -type d -regex './[0-9]\{4\}' | sort -r)
+                  ls
+                  folders=$(find . -maxdepth 1 -type d | sort -r)
                   echo "Folders: $folders"
                   echo "$folders" | while read -r dir; do
                     if [ -f "$dir/404.html" ]; then
