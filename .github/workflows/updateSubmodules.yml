@@ -16,15 +16,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        submodules: false
+        submodules: recursive
+        fetch-depth: 0
         
     - name: Git Submodule Update
       run: |
         git submodule update --init --recursive
         git submodule update --recursive --remote
-
+    
     - name: Find and Copy Latest 404.html
       run: |
+        set -e
+
         folders=$(find . -maxdepth 1 -type d -regex './[0-9]\{4\}' | sort -r)
         echo "$folders" | while read -r dir; do
           if [ -f "$dir/404.html" ]; then
@@ -33,6 +36,7 @@ jobs:
             break
           fi
         done
+
         if [ -n "$latest_file" ]; then
           echo "Copying $latest_file to root as 404.html"
           cp "$latest_file" ./404.html
@@ -45,4 +49,6 @@ jobs:
         git config --global user.name 'GitHub bot'
         git config --global user.email 'bot@noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git commit -am "Auto updated submodule" && git push || echo "No changes to commit"
+        git add ./404.html
+        git commit -m "Auto updated 404.html from latest submodule" || echo "No changes to commit"
+        git push
