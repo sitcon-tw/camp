@@ -1,3 +1,4 @@
+# https://stackoverflow.com/questions/64407333/using-github-actions-to-automatically-update-the-repos-submodules
 name: 'Submodules Sync'
 
 on:
@@ -14,41 +15,18 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
-        submodules: recursive
-        fetch-depth: 0
-        
-    - name: Git Submodule Update
+        submodules: false
+
+    - name: Git Sumbodule Update
       run: |
         git submodule update --init --recursive
         git submodule update --recursive --remote
-    
-    - name: Find and Copy Latest 404.html
-      run: |
-        set -e
-
-        folders=$(find . -maxdepth 1 -type d -regex './[0-9]\{4\}' | sort -r)
-        echo "$folders" | while read -r dir; do
-          if [ -f "$dir/404.html" ]; then
-            latest_file="$dir/404.html"
-            echo "Found 404.html in $dir"
-            break
-          fi
-        done
-
-        if [ -n "$latest_file" ]; then
-          echo "Copying $latest_file to root as 404.html"
-          cp "$latest_file" ./404.html
-        else
-          echo "No 404.html found in submodule folders."
-        fi
 
     - name: Commit update
       run: |
         git config --global user.name 'GitHub bot'
         git config --global user.email 'bot@noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git add ./404.html
-        git commit -m "Auto updated 404.html from latest submodule" || echo "No changes to commit"
-        git push
+        git commit -am "Auto updated submodule" && git push || echo "No changes to commit"
