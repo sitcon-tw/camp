@@ -24,6 +24,8 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+              with:
+                submodules: recursive
 
             - name: Find and Copy Latest 404.html
               run: |
