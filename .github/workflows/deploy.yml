@@ -28,7 +28,6 @@ jobs:
             - name: Find and Copy Latest 404.html
               run: |
                   set -e
-                  ls
                   folders=$(find . -maxdepth 1 -type d | sort -r)
                   echo "Folders: $folders"
 
