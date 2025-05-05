@@ -2,8 +2,6 @@ name: Deploy to GitHub Pages
 
 on:
     push:
-        branches:
-            - master
     workflow_dispatch:
 
 permissions:
@@ -32,6 +30,7 @@ jobs:
                   set -e
 
                   folders=$(find . -maxdepth 1 -type d -regex './[0-9]\{4\}' | sort -r)
+                  echo "Folders: $folders"
                   echo "$folders" | while read -r dir; do
                     if [ -f "$dir/404.html" ]; then
                       latest_file="$dir/404.html"
