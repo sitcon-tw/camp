@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
     workflow_run:
         workflows: ["Submodules Sync"]
-    push:
     workflow_dispatch:
 
 permissions:
