@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-    workflow_run:
-        workflows: ["Submodules Sync"]
+#    workflow_run:
+#        workflows: ["Submodules Sync"]
     workflow_dispatch:
 
 permissions:
