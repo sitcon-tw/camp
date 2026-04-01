@@ -34,3 +34,7 @@
 	path = 2025
 	url = https://github.com/sitcon-tw/camp2025.git
 	branch = gh-pages
+[submodule "2026"]
+	path = 2026
+	url = https://github.com/sitcon-tw/camp2026.git
+	branch = main
