@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sitcon.camp/sitemap.xml
+Sitemap: https://sitcon.camp/2026/sitemap-index.xml
